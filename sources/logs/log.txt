@@ -214,3 +214,43 @@
 [INFO][15-02-2021 08:29:11]: Core::createLoader
 [INFO][15-02-2021 08:29:11]: Starting to load file load-files/market.eu.20180227
 [INFO][15-02-2021 08:29:11]: Starting to parse file
+[INFO][15-02-2021 08:35:26]: Core instance created
+[INFO][15-02-2021 08:35:26]: Core::getLoader
+[INFO][15-02-2021 08:35:26]: Core::createLoader
+[INFO][15-02-2021 08:35:26]: Starting to load file load-files/market.eu.20180227
+[INFO][15-02-2021 08:35:26]: Starting to parse file
+[INFO][15-02-2021 08:37:53]: Core instance created
+[INFO][15-02-2021 08:37:53]: Core::getLoader
+[INFO][15-02-2021 08:37:53]: Core::createLoader
+[INFO][15-02-2021 08:37:54]: Starting to load file load-files/market.eu.20180227
+[INFO][15-02-2021 08:37:54]: Starting to parse file
+[INFO][15-02-2021 08:42:57]: Core instance created
+[INFO][15-02-2021 08:42:57]: Core::getLoader
+[INFO][15-02-2021 08:42:57]: Core::createLoader
+[INFO][15-02-2021 08:42:57]: Starting to load file load-files/market.eu.20180227
+[INFO][15-02-2021 08:42:57]: Starting to parse file
+[INFO][15-02-2021 08:43:11]: Core instance created
+[INFO][15-02-2021 08:43:11]: Core::getLoader
+[INFO][15-02-2021 08:43:11]: Core::createLoader
+[INFO][15-02-2021 08:43:11]: Starting to load file load-files/market.eu.20180227
+[INFO][15-02-2021 08:43:11]: Starting to parse file
+[INFO][15-02-2021 08:49:04]: Core instance created
+[INFO][15-02-2021 08:49:04]: Core::getLoader
+[INFO][15-02-2021 08:49:04]: Core::createLoader
+[INFO][15-02-2021 08:49:04]: Starting to load file load-files/market.eu.20180227
+[INFO][15-02-2021 08:49:04]: Starting to parse file
+[INFO][15-02-2021 08:51:01]: Core instance created
+[INFO][15-02-2021 08:51:01]: Core::getLoader
+[INFO][15-02-2021 08:51:01]: Core::createLoader
+[INFO][15-02-2021 08:51:01]: Starting to load file load-files/market.eu.20180227
+[INFO][15-02-2021 08:51:01]: Starting to parse file
+[INFO][15-02-2021 08:57:20]: Core instance created
+[INFO][15-02-2021 08:57:20]: Core::getLoader
+[INFO][15-02-2021 08:57:20]: Core::createLoader
+[INFO][15-02-2021 08:57:20]: Starting to load file load-files/market.eu.20180227
+[INFO][15-02-2021 08:57:20]: Starting to parse file
+[INFO][15-02-2021 08:59:58]: Core instance created
+[INFO][15-02-2021 08:59:58]: Core::getLoader
+[INFO][15-02-2021 08:59:58]: Core::createLoader
+[INFO][15-02-2021 08:59:58]: Starting to load file load-files/market.eu.20180227
+[INFO][15-02-2021 08:59:58]: Starting to parse file
