@@ -16,7 +16,7 @@ class Loader {
     {
 		Logger::getInst()->info("Starting to load file $file");
 		$handle = fopen($file, "r");
-		$fileContent = array();
+		$fileContent = [];
 		while (($data = fgetcsv($handle, "1000", ",")) !== false) {
 			$fileContent[] = $data;
 		}
@@ -37,9 +37,10 @@ class Loader {
 					$fieldsToInsert[] = $entryField;
 				}
 			});
-
 			$fieldsToInsert[] = date("Y-m-d");
-			$query = "INSERT INTO `market_data` (id_value, price, is_noon, update_date) VALUES (?, ?, ?, ?)";
+			$query = 'INSERT 
+                                INTO `market_data` (id_value, price, is_noon, update_date) 
+                                VALUES (?, ?, ?, ?)';
 			Adapter::getInst()->exec($query, $fieldsToInsert);
 		});
 

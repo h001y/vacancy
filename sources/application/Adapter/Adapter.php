@@ -19,7 +19,8 @@ class Adapter {
 
 	private function __construct(){}
 
-	public static function getInst() {
+	public static function getInst()
+    {
 		if (!isset(self::$inst)){
 			self::$inst = new self();
 		}
@@ -27,18 +28,21 @@ class Adapter {
 		return self::$inst;
 	}
 
-	public function getConnection() {
+	public function getConnection()
+    {
 		$conf = Conf::getInst()->getConf();
 		$this->connection = new \PDO("mysql:host={$conf->db->host};dbname={$conf->db->name}", $conf->db->user, $conf->db->password);
 	}
 
-	public function dropConnection() {
+	public function dropConnection()
+    {
 		if (isset($this->connection)) {
 			$this->connection = null;
 		}
 	}
 
-	public function exec($query, $args = array()) {
+	public function exec($query, $args = array())
+    {
 		try {
 			$this->getConnection();
 			$this->connection->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
@@ -47,10 +51,9 @@ class Adapter {
 			if (!is_array($args)) {
 				$args = array($args);
 			}
-
 			$stmt->execute($args);
 			$this->dropConnection();
-		} catch (\PDOException $e) {
+		} catch (PDOException $e) {
 			Logger::getInst()->debug("Error is thrown with message - " . $e->getMessage());
 		}
 	}

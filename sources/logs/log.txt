@@ -28,3 +28,189 @@
 [INFO][15-02-2021 08:00:39]: Starting to parse file
 [INFO][15-02-2021 08:00:39]: File parsing is finished
 [INFO][15-02-2021 08:00:39]: File load is finished
+[INFO][15-02-2021 08:03:44]: Core instance created
+[INFO][15-02-2021 08:03:44]: Core::getLoader
+[INFO][15-02-2021 08:03:44]: Core::createLoader
+[INFO][15-02-2021 08:03:45]: Starting to load file load-files/market.eu.20180227
+[INFO][15-02-2021 08:03:45]: Starting to parse file
+[INFO][15-02-2021 08:03:45]: File parsing is finished
+[INFO][15-02-2021 08:03:45]: File load is finished
+[INFO][15-02-2021 08:04:54]: Core instance created
+[INFO][15-02-2021 08:04:54]: Core::getLoader
+[INFO][15-02-2021 08:04:54]: Core::createLoader
+[INFO][15-02-2021 08:04:54]: Starting to load file load-files/market.eu.20180227
+[INFO][15-02-2021 08:04:54]: Starting to parse file
+[DEBUG][15-02-2021 08:04:54]: Error is thrown with message - SQLSTATE[HY000] [1049] Unknown database 'vacancy'
+[DEBUG][15-02-2021 08:04:54]: Error is thrown with message - SQLSTATE[HY000] [1049] Unknown database 'vacancy'
+[DEBUG][15-02-2021 08:04:54]: Error is thrown with message - SQLSTATE[HY000] [1049] Unknown database 'vacancy'
+[DEBUG][15-02-2021 08:04:54]: Error is thrown with message - SQLSTATE[HY000] [1049] Unknown database 'vacancy'
+[DEBUG][15-02-2021 08:04:54]: Error is thrown with message - SQLSTATE[HY000] [1049] Unknown database 'vacancy'
+[DEBUG][15-02-2021 08:04:54]: Error is thrown with message - SQLSTATE[HY000] [1049] Unknown database 'vacancy'
+[DEBUG][15-02-2021 08:04:54]: Error is thrown with message - SQLSTATE[HY000] [1049] Unknown database 'vacancy'
+[DEBUG][15-02-2021 08:04:54]: Error is thrown with message - SQLSTATE[HY000] [1049] Unknown database 'vacancy'
+[DEBUG][15-02-2021 08:04:54]: Error is thrown with message - SQLSTATE[HY000] [1049] Unknown database 'vacancy'
+[DEBUG][15-02-2021 08:04:54]: Error is thrown with message - SQLSTATE[HY000] [1049] Unknown database 'vacancy'
+[DEBUG][15-02-2021 08:04:54]: Error is thrown with message - SQLSTATE[HY000] [1049] Unknown database 'vacancy'
+[INFO][15-02-2021 08:04:54]: File parsing is finished
+[INFO][15-02-2021 08:04:54]: File load is finished
+[INFO][15-02-2021 08:06:06]: Core instance created
+[INFO][15-02-2021 08:06:06]: Core::getLoader
+[INFO][15-02-2021 08:06:06]: Core::createLoader
+[INFO][15-02-2021 08:06:06]: Starting to load file load-files/market.eu.20180227
+[INFO][15-02-2021 08:06:06]: Starting to parse file
+[DEBUG][15-02-2021 08:06:06]: Error is thrown with message - SQLSTATE[HY000] [1049] Unknown database 'vacancy'
+[DEBUG][15-02-2021 08:06:06]: Error is thrown with message - SQLSTATE[HY000] [1049] Unknown database 'vacancy'
+[DEBUG][15-02-2021 08:06:06]: Error is thrown with message - SQLSTATE[HY000] [1049] Unknown database 'vacancy'
+[DEBUG][15-02-2021 08:06:06]: Error is thrown with message - SQLSTATE[HY000] [1049] Unknown database 'vacancy'
+[DEBUG][15-02-2021 08:06:06]: Error is thrown with message - SQLSTATE[HY000] [1049] Unknown database 'vacancy'
+[DEBUG][15-02-2021 08:06:06]: Error is thrown with message - SQLSTATE[HY000] [1049] Unknown database 'vacancy'
+[DEBUG][15-02-2021 08:06:06]: Error is thrown with message - SQLSTATE[HY000] [1049] Unknown database 'vacancy'
+[DEBUG][15-02-2021 08:06:06]: Error is thrown with message - SQLSTATE[HY000] [1049] Unknown database 'vacancy'
+[DEBUG][15-02-2021 08:06:07]: Error is thrown with message - SQLSTATE[HY000] [1049] Unknown database 'vacancy'
+[DEBUG][15-02-2021 08:06:07]: Error is thrown with message - SQLSTATE[HY000] [1049] Unknown database 'vacancy'
+[DEBUG][15-02-2021 08:06:07]: Error is thrown with message - SQLSTATE[HY000] [1049] Unknown database 'vacancy'
+[INFO][15-02-2021 08:06:07]: File parsing is finished
+[INFO][15-02-2021 08:06:07]: File load is finished
+[INFO][15-02-2021 08:06:27]: Core instance created
+[INFO][15-02-2021 08:06:27]: Core::getLoader
+[INFO][15-02-2021 08:06:27]: Core::createLoader
+[INFO][15-02-2021 08:06:27]: Starting to load file load-files/market.eu.20180227
+[INFO][15-02-2021 08:06:27]: Starting to parse file
+[DEBUG][15-02-2021 08:06:27]: Error is thrown with message - SQLSTATE[HY000] [1049] Unknown database 'vacancy'
+[DEBUG][15-02-2021 08:06:27]: Error is thrown with message - SQLSTATE[HY000] [1049] Unknown database 'vacancy'
+[DEBUG][15-02-2021 08:06:27]: Error is thrown with message - SQLSTATE[HY000] [1049] Unknown database 'vacancy'
+[DEBUG][15-02-2021 08:06:27]: Error is thrown with message - SQLSTATE[HY000] [1049] Unknown database 'vacancy'
+[DEBUG][15-02-2021 08:06:27]: Error is thrown with message - SQLSTATE[HY000] [1049] Unknown database 'vacancy'
+[DEBUG][15-02-2021 08:06:27]: Error is thrown with message - SQLSTATE[HY000] [1049] Unknown database 'vacancy'
+[DEBUG][15-02-2021 08:06:27]: Error is thrown with message - SQLSTATE[HY000] [1049] Unknown database 'vacancy'
+[DEBUG][15-02-2021 08:06:27]: Error is thrown with message - SQLSTATE[HY000] [1049] Unknown database 'vacancy'
+[DEBUG][15-02-2021 08:06:27]: Error is thrown with message - SQLSTATE[HY000] [1049] Unknown database 'vacancy'
+[DEBUG][15-02-2021 08:06:27]: Error is thrown with message - SQLSTATE[HY000] [1049] Unknown database 'vacancy'
+[DEBUG][15-02-2021 08:06:27]: Error is thrown with message - SQLSTATE[HY000] [1049] Unknown database 'vacancy'
+[INFO][15-02-2021 08:06:27]: File parsing is finished
+[INFO][15-02-2021 08:06:27]: File load is finished
+[INFO][15-02-2021 08:10:48]: Core instance created
+[INFO][15-02-2021 08:10:48]: Core::getLoader
+[INFO][15-02-2021 08:10:48]: Core::createLoader
+[INFO][15-02-2021 08:10:48]: Starting to load file load-files/market.eu.20180227
+[INFO][15-02-2021 08:10:48]: Starting to parse file
+[DEBUG][15-02-2021 08:10:48]: Error is thrown with message - SQLSTATE[HY000] [1049] Unknown database 'vacancy'
+[DEBUG][15-02-2021 08:10:48]: Error is thrown with message - SQLSTATE[HY000] [1049] Unknown database 'vacancy'
+[DEBUG][15-02-2021 08:10:48]: Error is thrown with message - SQLSTATE[HY000] [1049] Unknown database 'vacancy'
+[DEBUG][15-02-2021 08:10:48]: Error is thrown with message - SQLSTATE[HY000] [1049] Unknown database 'vacancy'
+[DEBUG][15-02-2021 08:10:48]: Error is thrown with message - SQLSTATE[HY000] [1049] Unknown database 'vacancy'
+[DEBUG][15-02-2021 08:10:48]: Error is thrown with message - SQLSTATE[HY000] [1049] Unknown database 'vacancy'
+[DEBUG][15-02-2021 08:10:48]: Error is thrown with message - SQLSTATE[HY000] [1049] Unknown database 'vacancy'
+[DEBUG][15-02-2021 08:10:48]: Error is thrown with message - SQLSTATE[HY000] [1049] Unknown database 'vacancy'
+[DEBUG][15-02-2021 08:10:48]: Error is thrown with message - SQLSTATE[HY000] [1049] Unknown database 'vacancy'
+[DEBUG][15-02-2021 08:10:48]: Error is thrown with message - SQLSTATE[HY000] [1049] Unknown database 'vacancy'
+[DEBUG][15-02-2021 08:10:48]: Error is thrown with message - SQLSTATE[HY000] [1049] Unknown database 'vacancy'
+[INFO][15-02-2021 08:10:48]: File parsing is finished
+[INFO][15-02-2021 08:10:48]: File load is finished
+[INFO][15-02-2021 08:10:57]: Core instance created
+[INFO][15-02-2021 08:10:57]: Core::getLoader
+[INFO][15-02-2021 08:10:57]: Core::createLoader
+[INFO][15-02-2021 08:10:57]: Starting to load file load-files/market.eu.20180227
+[INFO][15-02-2021 08:10:57]: Starting to parse file
+[DEBUG][15-02-2021 08:10:57]: Error is thrown with message - SQLSTATE[HY000] [1049] Unknown database 'vacancy'
+[DEBUG][15-02-2021 08:10:57]: Error is thrown with message - SQLSTATE[HY000] [1049] Unknown database 'vacancy'
+[DEBUG][15-02-2021 08:10:57]: Error is thrown with message - SQLSTATE[HY000] [1049] Unknown database 'vacancy'
+[DEBUG][15-02-2021 08:10:57]: Error is thrown with message - SQLSTATE[HY000] [1049] Unknown database 'vacancy'
+[DEBUG][15-02-2021 08:10:57]: Error is thrown with message - SQLSTATE[HY000] [1049] Unknown database 'vacancy'
+[DEBUG][15-02-2021 08:10:57]: Error is thrown with message - SQLSTATE[HY000] [1049] Unknown database 'vacancy'
+[DEBUG][15-02-2021 08:10:57]: Error is thrown with message - SQLSTATE[HY000] [1049] Unknown database 'vacancy'
+[DEBUG][15-02-2021 08:10:57]: Error is thrown with message - SQLSTATE[HY000] [1049] Unknown database 'vacancy'
+[DEBUG][15-02-2021 08:10:57]: Error is thrown with message - SQLSTATE[HY000] [1049] Unknown database 'vacancy'
+[DEBUG][15-02-2021 08:10:57]: Error is thrown with message - SQLSTATE[HY000] [1049] Unknown database 'vacancy'
+[DEBUG][15-02-2021 08:10:57]: Error is thrown with message - SQLSTATE[HY000] [1049] Unknown database 'vacancy'
+[INFO][15-02-2021 08:10:57]: File parsing is finished
+[INFO][15-02-2021 08:10:57]: File load is finished
+[INFO][15-02-2021 08:14:25]: Core instance created
+[INFO][15-02-2021 08:14:25]: Core::getLoader
+[INFO][15-02-2021 08:14:25]: Core::createLoader
+[INFO][15-02-2021 08:14:25]: Starting to load file load-files/market.eu.20180227
+[INFO][15-02-2021 08:14:25]: Starting to parse file
+[DEBUG][15-02-2021 08:14:25]: Error is thrown with message - SQLSTATE[HY000] [1049] Unknown database 'vacancy'
+[DEBUG][15-02-2021 08:14:25]: Error is thrown with message - SQLSTATE[HY000] [1049] Unknown database 'vacancy'
+[DEBUG][15-02-2021 08:14:25]: Error is thrown with message - SQLSTATE[HY000] [1049] Unknown database 'vacancy'
+[DEBUG][15-02-2021 08:14:25]: Error is thrown with message - SQLSTATE[HY000] [1049] Unknown database 'vacancy'
+[DEBUG][15-02-2021 08:14:25]: Error is thrown with message - SQLSTATE[HY000] [1049] Unknown database 'vacancy'
+[DEBUG][15-02-2021 08:14:25]: Error is thrown with message - SQLSTATE[HY000] [1049] Unknown database 'vacancy'
+[DEBUG][15-02-2021 08:14:25]: Error is thrown with message - SQLSTATE[HY000] [1049] Unknown database 'vacancy'
+[DEBUG][15-02-2021 08:14:25]: Error is thrown with message - SQLSTATE[HY000] [1049] Unknown database 'vacancy'
+[DEBUG][15-02-2021 08:14:25]: Error is thrown with message - SQLSTATE[HY000] [1049] Unknown database 'vacancy'
+[DEBUG][15-02-2021 08:14:25]: Error is thrown with message - SQLSTATE[HY000] [1049] Unknown database 'vacancy'
+[DEBUG][15-02-2021 08:14:25]: Error is thrown with message - SQLSTATE[HY000] [1049] Unknown database 'vacancy'
+[INFO][15-02-2021 08:14:25]: File parsing is finished
+[INFO][15-02-2021 08:14:25]: File load is finished
+[INFO][15-02-2021 08:18:37]: Core instance created
+[INFO][15-02-2021 08:18:37]: Core::getLoader
+[INFO][15-02-2021 08:18:37]: Core::createLoader
+[INFO][15-02-2021 08:18:37]: Starting to load file load-files/market.eu.20180227
+[INFO][15-02-2021 08:18:37]: Starting to parse file
+[DEBUG][15-02-2021 08:18:37]: Error is thrown with message - SQLSTATE[HY000] [1049] Unknown database 'vacancy'
+[DEBUG][15-02-2021 08:18:37]: Error is thrown with message - SQLSTATE[HY000] [1049] Unknown database 'vacancy'
+[DEBUG][15-02-2021 08:18:37]: Error is thrown with message - SQLSTATE[HY000] [1049] Unknown database 'vacancy'
+[DEBUG][15-02-2021 08:18:37]: Error is thrown with message - SQLSTATE[HY000] [1049] Unknown database 'vacancy'
+[DEBUG][15-02-2021 08:18:37]: Error is thrown with message - SQLSTATE[HY000] [1049] Unknown database 'vacancy'
+[DEBUG][15-02-2021 08:18:37]: Error is thrown with message - SQLSTATE[HY000] [1049] Unknown database 'vacancy'
+[DEBUG][15-02-2021 08:18:37]: Error is thrown with message - SQLSTATE[HY000] [1049] Unknown database 'vacancy'
+[DEBUG][15-02-2021 08:18:37]: Error is thrown with message - SQLSTATE[HY000] [1049] Unknown database 'vacancy'
+[DEBUG][15-02-2021 08:18:37]: Error is thrown with message - SQLSTATE[HY000] [1049] Unknown database 'vacancy'
+[DEBUG][15-02-2021 08:18:37]: Error is thrown with message - SQLSTATE[HY000] [1049] Unknown database 'vacancy'
+[DEBUG][15-02-2021 08:18:37]: Error is thrown with message - SQLSTATE[HY000] [1049] Unknown database 'vacancy'
+[INFO][15-02-2021 08:18:37]: File parsing is finished
+[INFO][15-02-2021 08:18:37]: File load is finished
+[INFO][15-02-2021 08:20:31]: Core instance created
+[INFO][15-02-2021 08:20:31]: Core::getLoader
+[INFO][15-02-2021 08:20:31]: Core::createLoader
+[INFO][15-02-2021 08:20:31]: Starting to load file load-files/market.eu.20180227
+[INFO][15-02-2021 08:20:31]: Starting to parse file
+[INFO][15-02-2021 08:21:09]: Core instance created
+[INFO][15-02-2021 08:21:09]: Core::getLoader
+[INFO][15-02-2021 08:21:09]: Core::createLoader
+[INFO][15-02-2021 08:21:09]: Starting to load file load-files/market.eu.20180227
+[INFO][15-02-2021 08:21:09]: Starting to parse file
+[INFO][15-02-2021 08:22:08]: Core instance created
+[INFO][15-02-2021 08:22:08]: Core::getLoader
+[INFO][15-02-2021 08:22:08]: Core::createLoader
+[INFO][15-02-2021 08:22:08]: Starting to load file load-files/market.eu.20180227
+[INFO][15-02-2021 08:22:08]: Starting to parse file
+[DEBUG][15-02-2021 08:22:08]: Error is thrown with message - SQLSTATE[HY000] [1049] Unknown database 'vacancy'
+[DEBUG][15-02-2021 08:22:08]: Error is thrown with message - SQLSTATE[HY000] [1049] Unknown database 'vacancy'
+[DEBUG][15-02-2021 08:22:08]: Error is thrown with message - SQLSTATE[HY000] [1049] Unknown database 'vacancy'
+[DEBUG][15-02-2021 08:22:08]: Error is thrown with message - SQLSTATE[HY000] [1049] Unknown database 'vacancy'
+[DEBUG][15-02-2021 08:22:08]: Error is thrown with message - SQLSTATE[HY000] [1049] Unknown database 'vacancy'
+[DEBUG][15-02-2021 08:22:08]: Error is thrown with message - SQLSTATE[HY000] [1049] Unknown database 'vacancy'
+[DEBUG][15-02-2021 08:22:08]: Error is thrown with message - SQLSTATE[HY000] [1049] Unknown database 'vacancy'
+[DEBUG][15-02-2021 08:22:08]: Error is thrown with message - SQLSTATE[HY000] [1049] Unknown database 'vacancy'
+[DEBUG][15-02-2021 08:22:08]: Error is thrown with message - SQLSTATE[HY000] [1049] Unknown database 'vacancy'
+[DEBUG][15-02-2021 08:22:08]: Error is thrown with message - SQLSTATE[HY000] [1049] Unknown database 'vacancy'
+[DEBUG][15-02-2021 08:22:08]: Error is thrown with message - SQLSTATE[HY000] [1049] Unknown database 'vacancy'
+[INFO][15-02-2021 08:22:08]: File parsing is finished
+[INFO][15-02-2021 08:22:08]: File load is finished
+[INFO][15-02-2021 08:22:34]: Core instance created
+[INFO][15-02-2021 08:22:34]: Core::getLoader
+[INFO][15-02-2021 08:22:34]: Core::createLoader
+[INFO][15-02-2021 08:22:34]: Starting to load file load-files/market.eu.20180227
+[INFO][15-02-2021 08:22:34]: Starting to parse file
+[INFO][15-02-2021 08:22:46]: Core instance created
+[INFO][15-02-2021 08:22:46]: Core::getLoader
+[INFO][15-02-2021 08:22:46]: Core::createLoader
+[INFO][15-02-2021 08:22:46]: Starting to load file load-files/market.eu.20180227
+[INFO][15-02-2021 08:22:46]: Starting to parse file
+[INFO][15-02-2021 08:26:55]: Core instance created
+[INFO][15-02-2021 08:26:55]: Core::getLoader
+[INFO][15-02-2021 08:26:55]: Core::createLoader
+[INFO][15-02-2021 08:26:55]: Starting to load file load-files/market.eu.20180227
+[INFO][15-02-2021 08:26:55]: Starting to parse file
+[INFO][15-02-2021 08:27:43]: Core instance created
+[INFO][15-02-2021 08:27:43]: Core::getLoader
+[INFO][15-02-2021 08:27:43]: Core::createLoader
+[INFO][15-02-2021 08:27:43]: Starting to load file load-files/market.eu.20180227
+[INFO][15-02-2021 08:27:43]: Starting to parse file
+[INFO][15-02-2021 08:29:11]: Core instance created
+[INFO][15-02-2021 08:29:11]: Core::getLoader
+[INFO][15-02-2021 08:29:11]: Core::createLoader
+[INFO][15-02-2021 08:29:11]: Starting to load file load-files/market.eu.20180227
+[INFO][15-02-2021 08:29:11]: Starting to parse file
