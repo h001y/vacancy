@@ -1,7 +1,30 @@
-[INFO][28-02-2018 10:17:33]: Core instance created
-[INFO][28-02-2018 10:17:33]: Core::getLoader
-[INFO][28-02-2018 10:17:33]: Core::createLoader
-[INFO][28-02-2018 10:17:33]: Starting to load file \load-files\market.eu.20180227
-[INFO][28-02-2018 10:17:33]: Starting to parse file
-[INFO][28-02-2018 10:17:33]: File parsing is finished
-[INFO][28-02-2018 10:17:33]: File load is finished
+[INFO][15-02-2021 07:55:34]: File load is finished
+[INFO][15-02-2021 07:55:34]: File load is finished
+[INFO][15-02-2021 07:56:07]: Core instance created
+[INFO][15-02-2021 07:56:07]: Core::getLoader
+[INFO][15-02-2021 07:56:07]: Core::createLoader
+[INFO][15-02-2021 07:56:07]: Starting to load file load-files/market.eu.20180227
+[INFO][15-02-2021 07:56:07]: Starting to parse file
+[INFO][15-02-2021 07:56:07]: File parsing is finished
+[INFO][15-02-2021 07:56:07]: File load is finished
+[INFO][15-02-2021 07:56:30]: Core instance created
+[INFO][15-02-2021 07:56:30]: Core::getLoader
+[INFO][15-02-2021 07:56:30]: Core::createLoader
+[INFO][15-02-2021 07:56:30]: Starting to load file load-files/market.eu.20180227
+[INFO][15-02-2021 07:56:30]: Starting to parse file
+[INFO][15-02-2021 07:56:31]: File parsing is finished
+[INFO][15-02-2021 07:56:31]: File load is finished
+[INFO][15-02-2021 07:58:06]: Core instance created
+[INFO][15-02-2021 07:58:06]: Core::createLoader
+[INFO][15-02-2021 07:58:07]: Core::getLoader
+[INFO][15-02-2021 07:58:07]: Starting to load file load-files/market.eu.20180227
+[INFO][15-02-2021 07:58:07]: Starting to parse file
+[INFO][15-02-2021 07:58:07]: File parsing is finished
+[INFO][15-02-2021 07:58:07]: File load is finished
+[INFO][15-02-2021 08:00:39]: Core instance created
+[INFO][15-02-2021 08:00:39]: Core::getLoader
+[INFO][15-02-2021 08:00:39]: Core::createLoader
+[INFO][15-02-2021 08:00:39]: Starting to load file load-files/market.eu.20180227
+[INFO][15-02-2021 08:00:39]: Starting to parse file
+[INFO][15-02-2021 08:00:39]: File parsing is finished
+[INFO][15-02-2021 08:00:39]: File load is finished

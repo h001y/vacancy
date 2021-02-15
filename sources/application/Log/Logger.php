@@ -6,7 +6,8 @@ require_once (APP_PATH . "/Conf/Config.php");
 
 use Application\Conf\Config as Conf;
 
-class Logger {
+class Logger
+{
 
 	const LEVEL_DEBUG = "DEBUG";
 	const LEVEL_INFO = "INFO";
@@ -17,13 +18,13 @@ class Logger {
 	private $logFile;
 	private $logFileResource;
 
-	private function __construct(){
+	private function __construct()
+    {
 		$this->logFile = LOG_PATH . "/log.txt";
-		$logFile = @fopen($this->logFile, "a");
-		fclose($logFile);
 	}
 
-	public static function getInst() {
+	public static function getInst()
+    {
 		if (!isset(self::$inst)){
 			self::$inst = new self();
 		}
@@ -31,36 +32,27 @@ class Logger {
 		return self::$inst;
 	}
 
-	public function debug($message) {
+	public function debug($message)
+    {
 		$conf = Conf::getInst()->getConf();
 		if ($conf->logger->log_level === "debug") {
 			$this->writeMessage($message, self::LEVEL_DEBUG);
 		}
 	}
 
-	public function info($message) {
-		$this->writeMessage($message, self::LEVEL_INFO);
+	public function info($message)
+    {
+	    return $this->writeMessage($message);
 	}
 
-	public function warn($message) {
-		$this->writeMessage($message, self::LEVEL_WARN);
-	}
-
-	private function openFile() {
-		$this->logFileResource = @fopen($this->logFile, "r");
-	}
-
-	private function closeFile() {
-		if(isset($this->logFileResource)) {
-			@fclose($this->logFileResource);
-		}
+	public function warn($message)
+    {
+		return $this->writeMessage($message, self::LEVEL_WARN);
 	}
 
 	private function writeMessage($message, $logLevel = self::LEVEL_INFO) {
-		$this->openFile();
 		$currDate = date("d-m-Y h:i:s");
-		$message = "[$logLevel]" . "[" . $currDate . "]: " .  $message . PHP_EOL;
-		fwrite($this->logFileResource, $message);
-		$this->closeFile();
+		$message = "[$logLevel]" . "[$currDate]: " .  $message . PHP_EOL;
+        return file_put_contents($this->logFile, $message, FILE_APPEND);
 	}
 }

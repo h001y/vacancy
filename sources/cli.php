@@ -1,4 +1,8 @@
 <?php
+
+ini_set("display_errors",1); // Вывод ошибок
+error_reporting  (E_ALL); // Вывод ошибок
+
 require_once "Application/Core.php";
 
 $argv = $_SERVER["argv"];

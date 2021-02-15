@@ -12,7 +12,8 @@ class Loader {
 
 	public function __construct(){}
 
-	public function load($file) {
+	public function load($file)
+    {
 		Logger::getInst()->info("Starting to load file $file");
 		$handle = fopen($file, "r");
 		$fileContent = array();
@@ -25,7 +26,8 @@ class Loader {
 		Logger::getInst()->info("File load is finished");
 	}
 
-	private function parse($content) {
+	private function parse($content)
+    {
 		Logger::getInst()->info("Starting to parse file");
 		$needleFields = array(0, 1, 5);
 		array_walk($content, function($entry) use ($needleFields){
