@@ -47,7 +47,6 @@ class Adapter {
             $stmt = $this->connection->prepare($query);
             $stmt->execute();
             $result = $stmt->fetchAll();
-            var_dump($query);
 
             $this->dropConnection();
             return $result;

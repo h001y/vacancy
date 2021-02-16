@@ -88,21 +88,20 @@ class Loader
 
     /**
      * Validate table markets id_value with file[0] id_value
-     * @param string $id_value
+     * @param string $idValue
      * @return bool
      */
-    public function isValidate(string $id_value) : bool
+    public function isValidate(string $idValue) : bool
     {
         $query = 'SELECT * 
-                  FROM `markets` WHERE id_value = ' . $id_value . ' ';
-
+                  FROM `markets` WHERE id_value = ' . $idValue . ' ';
        return !empty(Adapter::getInst()->fetch($query));
     }
 
 	private function parse(array $content, string $region = 'eu', string $dateFile = '')
         {
         Logger::getInst()->info("Starting to parse file");
-
+        $insertedCount = 0;
             switch ($region) {
                 case 'eu':
                     $needleFields[] = 0;
@@ -119,6 +118,9 @@ class Loader
 
             foreach($entry as $index=>$entryField){
                 if (in_array($index, $needleFields)) {
+                    if($index=1){
+                        $fieldsToInsert[] = '"' . substr($entryField, 3). '"';
+                    }
                     $fieldsToInsert[] = '"' . $entryField. '"';
                 }
             }
@@ -129,11 +131,12 @@ class Loader
             if ($this->isValidate($fieldsToInsert[0])) {
                 $query = 'INSERT INTO `market_data` (id_value, price, is_noon, update_date) 
                              VALUES (' . implode(", ", $fieldsToInsert). ' )';
-
+                var_dump($query);
                 Adapter::getInst()->exec($query);
+                $insertedCount ++;
             }
         }
-        Logger::getInst()->info("File parsing is finished");
+        Logger::getInst()->info("File parsing is finished. Added " . $insertedCount . " rows");
     }
 
 }
