@@ -10,11 +10,8 @@ class Loader
 
 	public function __construct(){}
 
-	private function getRegion(string $file): string
+	private function getRegion(array $partFilenames): string
     {
-        $filePath = explode('/', $file);
-        $filename = array_pop($filePath);
-        $partFilenames = explode('.', $filename);
         $regionTypes = ['eu', 'us'];
         $currentRegion = '';
         $result = '';
@@ -26,22 +23,37 @@ class Loader
         return $result;
     }
 
+    private function getDateFromFilename(array $partFilenames): string
+    {
+        return array_pop($partFilenames);
+    }
+
+    private function getFileParts(string $file): array
+    {
+        $filePath = explode('/', $file);
+        $filename = array_pop($filePath);
+        $partFilenames = explode('.', $filename);
+        return $partFilenames;
+    }
+
 	public function load(string $file)
     {
 		Logger::getInst()->info("Starting to load file $file");
-		$currentRegion = $this->getRegion($file);
+        $partFilenames = $this->getFileParts($file);
+        $currentRegion = $this->getRegion($partFilenames);
+        $dateFile = $this->getDateFromFilename($partFilenames);
 		$handle = fopen($file, "r");
 		$fileContent = [];
 		while (($data = fgetcsv($handle, "1000", ",")) !== false) {
 			$fileContent[] = $data;
 		}
 		unset($fileContent[0]);
-		$this->parse($fileContent, $currentRegion);
+		$this->parse($fileContent, $currentRegion, $dateFile);
 
 		Logger::getInst()->info("File load is finished");
 	}
 
-	private function parse(array $content, string $region)
+	private function parse(array $content, string $region = 'eu', string $dateFile = '')
         {
         Logger::getInst()->info("Starting to parse file");
 
