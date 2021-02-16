@@ -8,9 +8,29 @@ use Application\Adapter\Adapter;
 class Loader
 {
 
-	public function __construct(){}
+    /**
+     * @var Loader
+     */
+    private static $inst;
 
-	private function getRegion(array $partFilenames): string
+    public function __construct(){}
+
+    public static function getInst()
+    {
+        if (!isset(self::$inst)){
+            self::$inst = new self();
+        }
+
+        return self::$inst;
+    }
+
+
+    /**
+     * Get region abbreviration from filename
+     * @param array $partFilenames
+     * @return string
+     */
+    private function getRegion(array $partFilenames): string
     {
         $regionTypes = ['eu', 'us'];
         $currentRegion = '';
@@ -23,20 +43,33 @@ class Loader
         return $result;
     }
 
+    /**
+     * Get data date from filename
+     * @param array $partFilenames
+     * @return string
+     */
     private function getDateFromFilename(array $partFilenames): string
     {
         return array_pop($partFilenames);
     }
 
+    /**
+     * Get parts of file path
+     * @param string $file
+     * @return array
+     */
     private function getFileParts(string $file): array
     {
         $filePath = explode('/', $file);
         $filename = array_pop($filePath);
-        $partFilenames = explode('.', $filename);
-        return $partFilenames;
+        return explode('.', $filename);
     }
 
-	public function load(string $file)
+    /**
+     * Load file to array
+     * @param string $file
+     */
+    public function load(string $file)
     {
 		Logger::getInst()->info("Starting to load file $file");
         $partFilenames = $this->getFileParts($file);
@@ -53,11 +86,34 @@ class Loader
 		Logger::getInst()->info("File load is finished");
 	}
 
+    /**
+     * Validate table markets id_value with file[0] id_value
+     * @param string $id_value
+     * @return bool
+     */
+    public function isValidate(string $id_value) : bool
+    {
+        $query = 'SELECT * 
+                  FROM `markets` WHERE id_value = ' . $id_value . ' ';
+
+       return !empty(Adapter::getInst()->fetch($query));
+    }
+
 	private function parse(array $content, string $region = 'eu', string $dateFile = '')
         {
         Logger::getInst()->info("Starting to parse file");
 
-        $needleFields = [0, 1, 5];
+            switch ($region) {
+                case 'eu':
+                    $needleFields[] = 0;
+                    break;
+                case 'us':
+                    $needleFields[] = 6;
+                    break;
+            }
+
+        array_push($needleFields, 1, 5);
+
         foreach ($content as $entry){
             $fieldsToInsert = [];
 
@@ -67,11 +123,15 @@ class Loader
                 }
             }
 
-            $fieldsToInsert[] =  '"' . date('Y-m-d H:i:s') . '"';
+            $dateFileTs = strtotime($dateFile);
+            $fieldsToInsert[] =  '"' . date('Y-m-d', $dateFileTs) . '"';
 
-            $query = 'INSERT INTO `market_data` (id_value, price, is_noon, update_date) 
+            if ($this->isValidate($fieldsToInsert[0])) {
+                $query = 'INSERT INTO `market_data` (id_value, price, is_noon, update_date) 
                              VALUES (' . implode(", ", $fieldsToInsert). ' )';
-            Adapter::getInst()->exec($query, $fieldsToInsert);
+
+                Adapter::getInst()->exec($query);
+            }
         }
         Logger::getInst()->info("File parsing is finished");
     }

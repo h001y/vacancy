@@ -38,16 +38,31 @@ class Adapter {
 		}
 	}
 
-	public function exec($query, $args = array())
+	public function fetch($query)
+    {
+        try {
+            $result = [];
+            $this->getConnection();
+            $this->connection->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
+            $stmt = $this->connection->prepare($query);
+            $stmt->execute();
+            $result = $stmt->fetchAll();
+            var_dump($query);
+
+            $this->dropConnection();
+            return $result;
+        }  catch (PDOException $e) {
+            Logger::getInst()->debug("Error is thrown with message - " . $e->getMessage());
+        }
+    }
+
+	public function exec($query)
     {
 		try {
 			$this->getConnection();
 			$this->connection->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
-
 			$stmt = $this->connection->prepare($query);
-			if (is_array($args)) {
-                $stmt->execute($args);
-			}
+			$stmt->execute();
 			$this->dropConnection();
 		} catch (PDOException $e) {
 			Logger::getInst()->debug("Error is thrown with message - " . $e->getMessage());
