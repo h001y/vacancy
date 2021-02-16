@@ -2,10 +2,7 @@
 
 namespace Application\Loader;
 
-require_once (APP_PATH . "/Adapter/Adapter.php");
-require_once (APP_PATH . "/Log/Logger.php");
-
-use Application\Log\Logger as Logger;
+use Application\Log\Logger;
 use Application\Adapter\Adapter;
 
 class Loader

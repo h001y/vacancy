@@ -2,11 +2,8 @@
 
 namespace Application\Adapter;
 
-require_once (APP_PATH . "/Conf/Config.php");
-require_once (APP_PATH . "/Log/Logger.php");
-
 use Application\Conf\Config as Conf;
-use Application\Log\Logger as Logger;
+use Application\Log\Logger;
 
 class Adapter {
 

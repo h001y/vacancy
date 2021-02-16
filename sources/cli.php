@@ -3,12 +3,12 @@
 ini_set("display_errors",1); // Вывод ошибок
 error_reporting  (E_ALL); // Вывод ошибок
 
-require_once "Application/Core.php";
+require __DIR__.'/application/autoload.php';
 
 $argv = $_SERVER["argv"];
 
 if (count($argv) > 0) {
-	$core = new \Application\Core();
+	$core = new Application\Core();
 	$loader = $core->getLoader();
 	$loader->load($argv[1]);
 } else {

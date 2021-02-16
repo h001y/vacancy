@@ -2,9 +2,8 @@
 
 namespace Application\Log;
 
-require_once (APP_PATH . "/Conf/Config.php");
-
 use Application\Conf\Config as Conf;
+use Application\Core;
 
 class Logger
 {
@@ -14,13 +13,15 @@ class Logger
 	const LEVEL_WARN = "WARN";
 	const LEVEL_ERROR= "ERROR";
 
+	const LOG_PATH = Core::ROOT_PATH . "/logs";
+
 	private static $inst;
 	private $logFile;
 	private $logFileResource;
 
 	private function __construct()
     {
-		$this->logFile = LOG_PATH . "/log.txt";
+		$this->logFile = $this::LOG_PATH . "/log.txt";
 	}
 
 	public static function getInst()
