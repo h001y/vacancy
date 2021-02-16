@@ -13,7 +13,7 @@ class Core
 	const ROOT_PATH = APP_PATH . "/..";
 	public function __construct()
     {
-		Log::getInst()->info("Core instance created");
+		Logger::getInst()->info("Core instance created");
 	}
 
 	/**
