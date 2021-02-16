@@ -8,7 +8,8 @@ require_once (APP_PATH . "/Log/Logger.php");
 use Application\Log\Logger as Logger;
 use Application\Adapter\Adapter;
 
-class Loader {
+class Loader
+{
 
 	public function __construct(){}
 
@@ -27,24 +28,25 @@ class Loader {
 	}
 
 	private function parse($content)
-    {
-		Logger::getInst()->info("Starting to parse file");
-		$needleFields = [0, 3, 5];
-		foreach ($content as $k=>$string) {
-		    foreach($needleFields as $field){
-		        $query_param[$k][] = $string[$field];
+        {
+        Logger::getInst()->info("Starting to parse file");
+        $needleFields = [0, 1, 5];
+        foreach ($content as $entry){
+            $fieldsToInsert = [];
+
+            foreach($entry as $index=>$entryField){
+                if (in_array($index, $needleFields)) {
+                    $fieldsToInsert[] = '"' . $entryField. '"';
+                }
             }
-		    $query_param[$k][] =  date('Y-m-d H:i:s');
+
+            $fieldsToInsert[] =  '"' . date('Y-m-d H:i:s') . '"';
+
+            $query = 'INSERT INTO `market_data` (id_value, price, is_noon, update_date) 
+                             VALUES (' . implode(", ", $fieldsToInsert). ' )';
+            Adapter::getInst()->exec($query, $fieldsToInsert);
         }
-
-        $query = 'INSERT 
-                                INTO `market_data` (id_value, price, is_noon, update_date) 
-                                VALUES (' . implode(', ', $query_param[$k]) .')';
-        Adapter::getInst()->exec($query);
-			var_dump($query_param);
-			die();
-
-		Logger::getInst()->info("File parsing is finished");
-	}
+        Logger::getInst()->info("File parsing is finished");
+    }
 
 }

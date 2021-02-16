@@ -48,16 +48,13 @@ class Adapter {
 			$this->connection->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
 
 			$stmt = $this->connection->prepare($query);
-			if (!is_array($args)) {
-				$args = array($args);
+			if (is_array($args)) {
+                $stmt->execute($args);
 			}
-			$stmt->execute($args);
 			$this->dropConnection();
 		} catch (PDOException $e) {
 			Logger::getInst()->debug("Error is thrown with message - " . $e->getMessage());
 		}
 	}
-
-
 
 }
