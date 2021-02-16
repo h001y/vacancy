@@ -10,7 +10,6 @@ class Core
 
 	private $loader;
 
-	const ROOT_PATH = APP_PATH . "/..";
 	public function __construct()
     {
 		Logger::getInst()->info("Core instance created");

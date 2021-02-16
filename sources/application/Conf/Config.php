@@ -20,7 +20,11 @@ class Config {
 		$this->conf = (object) $conf;
 	}
 
-	public static function getInst()
+    /**
+     * Singleton pattern
+     * @return Config
+     */
+    public static function getInst()
     {
 		if (!isset(self::$inst)){
 			self::$inst = new self();
@@ -29,7 +33,11 @@ class Config {
 		return self::$inst;
 	}
 
-	public function getConf()
+    /**
+     * Get conf from .ini
+     * @return object
+     */
+    public function getConf()
     {
 		return $this->conf;
 	}

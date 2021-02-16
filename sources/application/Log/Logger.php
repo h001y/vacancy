@@ -13,18 +13,19 @@ class Logger
 	const LEVEL_WARN = "WARN";
 	const LEVEL_ERROR= "ERROR";
 
-	const LOG_PATH = Core::ROOT_PATH . "/logs";
-
 	private static $inst;
-	private $logFile;
-	private $logFileResource;
 
-	private function __construct()
+    private function __construct()
     {
-		$this->logFile = $this::LOG_PATH . "/log.txt";
+		$this->logFile = LOG_PATH . "/log.txt";
 	}
 
-	public static function getInst()
+
+    /**
+     * Singleton pattern
+     * @return Logger
+     */
+    public static function getInst(): Logger
     {
 		if (!isset(self::$inst)){
 			self::$inst = new self();
@@ -33,7 +34,11 @@ class Logger
 		return self::$inst;
 	}
 
-	public function debug($message)
+    /**
+     * logging debug
+     * @param $message
+     */
+    public function debug($message)
     {
 		$conf = Conf::getInst()->getConf();
 		if ($conf->logger->log_level === "debug") {
