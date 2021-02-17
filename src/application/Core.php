@@ -10,6 +10,10 @@ class Core
 
 	private $loader;
 
+    const ROOT_PATH = __DIR__ . "/..";
+    const LOG_PATH = __DIR__  . "/../logs";
+    const CONF_PATH = __DIR__ . "/../conf";
+
 	public function __construct()
     {
 		Logger::getInst()->info("Core instance created");

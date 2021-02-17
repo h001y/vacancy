@@ -4,6 +4,7 @@ namespace Application\Loader;
 
 use Application\Log\Logger;
 use Application\Adapter\Adapter;
+use Application\Core;
 
 class Loader
 {

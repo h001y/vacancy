@@ -10,13 +10,14 @@ class Logger
 	const LEVEL_DEBUG = "DEBUG";
 	const LEVEL_INFO = "INFO";
 	const LEVEL_WARN = "WARN";
-	const LEVEL_ERROR= "ERROR";
+	const LEVEL_ERROR = "ERROR";
+	const LOG_PATH = __DIR__."/../../logs";
 
 	private static $inst;
 
     private function __construct()
     {
-		$this->logFile = LOG_PATH . "/log.txt";
+		$this->logFile = $this::LOG_PATH . "/log.txt";
 	}
 
 

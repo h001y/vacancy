@@ -4,3 +4,4 @@ logs/
 conf/
 composer.bat
 composer.phar
+vendor/
