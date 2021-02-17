@@ -1,4 +1,6 @@
 .idea
 .git
-/logs/*
-/conf/*
+logs/
+conf/
+composer.bat
+composer.phar

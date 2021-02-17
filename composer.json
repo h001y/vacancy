@@ -1,0 +1,22 @@
+{
+  "name": "vendor_name/vacancy",
+  "description": "description",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "hoo1y",
+      "email": "hoo1y@yandex.ru"
+    }
+  ],
+
+    "autoload": {
+      "classmap": [
+        "src/"
+      ]
+    },
+    "require-dev": {
+      "phpunit/phpunit": "^9"
+    }
+
+}
