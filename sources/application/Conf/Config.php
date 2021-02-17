@@ -7,9 +7,6 @@ class Config {
 	protected $conf;
 	protected static $inst;
 
-	const CONF_PATH = ROOT_PATH . "/conf";
-	const APP_ENV = "dev";
-
 	private function __construct()
     {
 		$conf = parse_ini_file(CONF_PATH . "/conf_" . APP_ENV . ".ini", true);
@@ -24,7 +21,7 @@ class Config {
      * Singleton pattern
      * @return Config
      */
-    public static function getInst()
+    public static function getInst(): Config
     {
 		if (!isset(self::$inst)){
 			self::$inst = new self();
@@ -37,7 +34,7 @@ class Config {
      * Get conf from .ini
      * @return object
      */
-    public function getConf()
+    public function getConf(): object
     {
 		return $this->conf;
 	}

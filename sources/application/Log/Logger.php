@@ -3,7 +3,6 @@
 namespace Application\Log;
 
 use Application\Conf\Config as Conf;
-use Application\Core;
 
 class Logger
 {
@@ -46,19 +45,47 @@ class Logger
 		}
 	}
 
-	public function info($message)
+    /**
+     * Write info in log
+     * @param $message
+     * @return bool
+     */
+    public function info($message) : bool
     {
-	    return $this->writeMessage($message);
+	    return $this->writeMessage($message, self::LEVEL_INFO);
 	}
 
-	public function warn($message)
+    /**
+     * Write info in log
+     * @param $message
+     * @return bool
+     */
+    public function error($message): bool
+    {
+        return $this->writeMessage($message, self::LEVEL_ERROR);
+    }
+
+    /**
+     * Write warning message in log
+     * @param $message
+     * @return bool
+     */
+	public function warn($message) : bool
     {
 		return $this->writeMessage($message, self::LEVEL_WARN);
 	}
 
-	private function writeMessage($message, $logLevel = self::LEVEL_INFO) {
+    /**
+     * Write message in log default - INFO message
+     * example : '[INFO][17-02-2021 08:43:43]: Connection successfully'
+     * @param $message
+     * @param string $logLevel
+     * @return bool
+     */
+	private function writeMessage($message, $logLevel = self::LEVEL_INFO) : bool
+    {
 		$currDate = date("d-m-Y h:i:s");
 		$message = "[$logLevel]" . "[$currDate]: " .  $message . PHP_EOL;
-        return file_put_contents($this->logFile, $message, FILE_APPEND);
+        return !empty(file_put_contents($this->logFile, $message, FILE_APPEND));
 	}
 }

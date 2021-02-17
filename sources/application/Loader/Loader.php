@@ -8,32 +8,18 @@ use Application\Adapter\Adapter;
 class Loader
 {
 
-    /**
-     * @var Loader
-     */
     private static $inst;
 
     public function __construct(){}
 
-    public static function getInst()
-    {
-        if (!isset(self::$inst)){
-            self::$inst = new self();
-        }
-
-        return self::$inst;
-    }
-
-
     /**
-     * Get region abbreviration from filename
+     * Get region abbreviation from filename
      * @param array $partFilenames
      * @return string
      */
     private function getRegion(array $partFilenames): string
     {
         $regionTypes = ['eu', 'us'];
-        $currentRegion = '';
         $result = '';
         foreach($partFilenames as $partFilename){
             if (in_array($partFilename, $regionTypes)) {
@@ -48,7 +34,7 @@ class Loader
      * @param array $partFilenames
      * @return string
      */
-    private function getDateFromFilename(array $partFilenames): string
+    private function getDateFromFile(array $partFilenames): string
     {
         return array_pop($partFilenames);
     }
@@ -74,7 +60,7 @@ class Loader
 		Logger::getInst()->info("Starting to load file $file");
         $partFilenames = $this->getFileParts($file);
         $currentRegion = $this->getRegion($partFilenames);
-        $dateFile = $this->getDateFromFilename($partFilenames);
+        $dateFile = $this->getDateFromFile($partFilenames);
 		$handle = fopen($file, "r");
 		$fileContent = [];
 		while (($data = fgetcsv($handle, "1000", ",")) !== false) {
@@ -94,20 +80,27 @@ class Loader
     public function isValidate(string $idValue) : bool
     {
         $query = 'SELECT * 
-                  FROM `markets` WHERE id_value = ' . $idValue . ' ';
+                  FROM `markets` WHERE id_value = ' . $idValue;
+
        return !empty(Adapter::getInst()->fetch($query));
     }
 
 	private function parse(array $content, string $region = 'eu', string $dateFile = '')
         {
         Logger::getInst()->info("Starting to parse file");
+        $pricePosition = 1;
         $insertedCount = 0;
+        $idValuePosition = 0;
             switch ($region) {
                 case 'eu':
+                    $stringToAdd = 'id_value, price, is_noon, update_date';
                     $needleFields[] = 0;
+                    $idValuePosition = 0;
                     break;
                 case 'us':
+                    $stringToAdd = 'price, is_noon, id_value, update_date';
                     $needleFields[] = 6;
+                    $idValuePosition = 2;
                     break;
             }
 
@@ -118,20 +111,19 @@ class Loader
 
             foreach($entry as $index=>$entryField){
                 if (in_array($index, $needleFields)) {
-                    if($index=1){
+                    if($index == '1'){
                         $fieldsToInsert[] = '"' . substr($entryField, 3). '"';
+                    } else {
+                        $fieldsToInsert[] = '"' . $entryField. '"';
                     }
-                    $fieldsToInsert[] = '"' . $entryField. '"';
                 }
             }
 
             $dateFileTs = strtotime($dateFile);
             $fieldsToInsert[] =  '"' . date('Y-m-d', $dateFileTs) . '"';
-
-            if ($this->isValidate($fieldsToInsert[0])) {
-                $query = 'INSERT INTO `market_data` (id_value, price, is_noon, update_date) 
+            if ($this->isValidate($fieldsToInsert[$idValuePosition])) {
+                $query = 'INSERT INTO `market_data` (' . $stringToAdd . ') 
                              VALUES (' . implode(", ", $fieldsToInsert). ' )';
-                var_dump($query);
                 Adapter::getInst()->exec($query);
                 $insertedCount ++;
             }
