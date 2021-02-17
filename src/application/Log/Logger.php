@@ -38,11 +38,11 @@ class Logger
      * logging debug
      * @param $message
      */
-    public function debug($message)
+    public function debug($message) : bool
     {
 		$conf = Conf::getInst()->getConf();
 		if ($conf->logger->log_level === "debug") {
-			$this->writeMessage($message, self::LEVEL_DEBUG);
+			return $this->writeMessage($message, self::LEVEL_DEBUG);
 		}
 	}
 

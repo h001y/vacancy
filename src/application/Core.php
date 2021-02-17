@@ -28,13 +28,12 @@ class Core
 		if (!isset($this->loader)) {
 			$this->createLoader();
 		}
-
 		return $this->loader;
 	}
 
-	private function createLoader()
+	private function createLoader() : object
     {
 		Logger::getInst()->info("Core::createLoader");
-		$this->loader = new Loader();
+		return $this->loader = new Loader();
 	}
 }
